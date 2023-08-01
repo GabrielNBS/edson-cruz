@@ -1,6 +1,8 @@
+import HeaderContainer from "./components/HeaderContainer"
+
 function App() {
   return (
-    <h1>Olá mundo</h1>
+    <HeaderContainer />
   )
 }
 

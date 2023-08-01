@@ -1,0 +1,33 @@
+@use "../mixins"
+@use "../variables"
+.header
+    background-color: #fff
+    padding: 12px
+
+    .container
+        display: grid
+        grid-template-columns: 1fr 2fr
+        align-items: center
+
+    &__branding
+        justify-items: flex-start
+
+    &__nav
+        justify-self: flex-start
+
+    &__list
+        display: inline-flex
+        gap: 12px
+
+        &__item
+            color: variables.$btn-primario
+            font-weight: bold
+
+        &__link
+            color: variables.$btn-primario
+            padding: 8px
+            border: 2px solid transparent
+
+            &:hover
+                color: lighten(variables.$btn-primario, 15)
+                border-bottom: 2px solid variables.$btn-primario
