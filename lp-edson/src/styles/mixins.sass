@@ -2,3 +2,12 @@
     display: flex
     justify-content: center
     align-items: center
+
+@mixin toggle-transform($transform)
+    content: ""
+    display: flex
+    position: absolute
+    width: 28px
+    height: 3px
+    transition: 0.2s
+    transform: $transform
