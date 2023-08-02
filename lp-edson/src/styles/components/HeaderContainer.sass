@@ -2,7 +2,7 @@
 @use "../variables"
 
 .header
-    background-color: #fff
+    background-color: variables.$btn-secundario
     padding: 12px
 
     .container
@@ -20,7 +20,8 @@
         width: 2rem
         border: none
         cursor: pointer
-        background-color: variables.$cor-secundaria
+        background-color: transparent
+
 
         @media (max-width: 767px)
             display: block
@@ -80,6 +81,10 @@
             color: variables.$btn-primario
             font-weight: bold
 
+        @media (max-width: 767px)
+            justify-content: center
+            
+
         &__link
             color: variables.$btn-primario
             padding: 8px
@@ -88,3 +93,4 @@
             &:hover
                 color: lighten(variables.$btn-primario, 15)
                 border-bottom: 2px solid variables.$btn-primario
+

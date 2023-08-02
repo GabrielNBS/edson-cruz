@@ -1,8 +1,12 @@
 import HeaderContainer from "./components/HeaderContainer"
+import AboutContainer from "./components/AboutContainer"
 
 function App() {
   return (
-    <HeaderContainer />
+    <>
+      <HeaderContainer />
+      <AboutContainer />
+    </>
   )
 }
 
