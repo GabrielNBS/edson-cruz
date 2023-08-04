@@ -1,0 +1,79 @@
+@use "../variables"
+@use "../mixins"
+
+.services
+    @include mixins.center()
+    background-color: variables.$cor-primaria
+
+
+    .container
+        width: 100%
+        padding: 3rem
+        margin: 5rem 0
+        background-color: darken(variables.$cor-primaria, 5)
+        text-align: center
+        border-radius: 1rem 10rem 1rem 10rem
+        box-shadow: 0 0 1rem lighten(variables.$cor-primaria , 10)      
+
+    
+    &__title
+        font-size: variables.$fs-subtitulo
+        color: variables.$branco
+        margin-bottom: 2rem
+        
+        span
+            color: variables.$btn-primario
+    
+    &__cards
+        display: grid
+        width: 100%
+        grid-template-columns: repeat(3, 1fr)
+        gap: 1rem
+        margin: 3rem 0
+    
+
+    &__card
+        border: 3px solid #fff
+        height: 25rem
+
+        &:nth-child(1)
+            border: solid 3px green
+            .services__card__icon
+                background-color: green
+        
+        &:nth-child(2)
+            border: solid 3px purple
+            .services__card__icon
+                background-color: purple
+
+        &:nth-child(3)
+            border: solid 3px gold
+            .services__card__icon
+                background-color: gold
+
+        &__icon
+            @include mixins.center()
+            height: 10rem
+            width: 10rem
+            border-radius: 50%
+            margin: 2rem auto
+            
+        
+        &__title 
+            color: variables.$cor-secundaria
+            margin-bottom: 1rem
+
+        &__description
+            color: darken(variables.$cor-secundaria, 10)
+
+
+.icon--default
+    font-size: 4rem
+    color: variables.$branco
+
+.card--1
+    color: green
+.card--2
+    color: purple
+.card--3
+    color: gold

@@ -1,3 +1,5 @@
+@use "./variables"
+    
 @mixin center()
     display: flex
     justify-content: center
@@ -11,3 +13,20 @@
     height: 3px
     transition: 0.2s
     transform: $transform
+
+@mixin btn-default()
+        display: flex
+        justify-content: center
+        justify-self: center
+        align-items: center
+        font-size: 1.5rem
+        font-weight: bold
+        width: 300px
+        padding: 1rem
+        border-radius: 1rem
+        border: none
+        margin: 5rem 0 2rem
+        background-color: variables.$btn-primario
+        color: variables.$branco
+        box-shadow: 0 0 15px variables.$btn-primario
+        transition: all .2s ease
