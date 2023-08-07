@@ -13,7 +13,10 @@
         background-color: darken(variables.$cor-primaria, 5)
         text-align: center
         border-radius: 1rem 10rem 1rem 10rem
-        box-shadow: 0 0 1rem lighten(variables.$cor-primaria , 10)      
+        box-shadow: 0 0 1rem lighten(variables.$cor-primaria , 10)
+        
+        @media (max-width: 767px)
+            border-radius: 0
 
     
     &__title
@@ -30,11 +33,14 @@
         grid-template-columns: repeat(3, 1fr)
         gap: 1rem
         margin: 3rem 0
-    
+        overflow: auto
+
+        @media (max-width: 767px)
+            grid-template-columns: repeat(3, minmax(19rem, 1fr))
 
     &__card
-        border: 3px solid #fff
         height: 25rem
+        border-radius: 0.3rem
 
         &:nth-child(1)
             border: solid 3px green
@@ -43,6 +49,7 @@
         
         &:nth-child(2)
             border: solid 3px purple
+
             .services__card__icon
                 background-color: purple
 
