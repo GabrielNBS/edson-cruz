@@ -3,6 +3,7 @@ import AboutContainer from "./components/AboutContainer"
 import ServicesContainer from "./components/ServicesContainer"
 import TextStep from "./components/TextStep"
 import GalleryContainer from "./components/GalleryContainer"
+import AssessmentsContainer from "./components/AssessmentsContainer"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ServicesContainer />
       <TextStep />
       <GalleryContainer />
+      <AssessmentsContainer />
     </>
   )
 }
