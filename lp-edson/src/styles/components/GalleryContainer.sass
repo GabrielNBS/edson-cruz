@@ -1,0 +1,20 @@
+@use "../variables"
+@use "../mixins"
+
+.gallery 
+    padding: 3rem 0
+
+    .container 
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+
+    &__text
+        display: flex
+        justify-content: center
+        padding-top: 2rem 
+
+        &__content
+            font-size: variables.$fs-titulo
+            
+            &--text-right
+                text-align: end
