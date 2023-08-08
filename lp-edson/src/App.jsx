@@ -5,10 +5,12 @@ import TextStep from "./components/TextStep"
 import GalleryContainer from "./components/GalleryContainer"
 import AssessmentsContainer from "./components/AssessmentsContainer"
 import PlansContainer from "./components/PlansContainer"
+import ContactContainer from "./components/ContactContainer"
+
 
 function App() {
   return (
-    <>
+    <div>
       <HeaderContainer />
       <AboutContainer />
       <ServicesContainer />
@@ -16,7 +18,8 @@ function App() {
       <GalleryContainer />
       <AssessmentsContainer />
       <PlansContainer />
-    </>
+      <ContactContainer />
+    </div>
   )
 }
 

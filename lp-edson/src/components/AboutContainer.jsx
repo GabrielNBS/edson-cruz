@@ -5,7 +5,7 @@ import { FaRegHandPointLeft } from "react-icons/fa";
 
 import Background from "../img/curveLine.svg"
 import Arrow from "../img/arrow.svg"
-import Hero from "../img/background2.jpg"
+import Hero from "../img/hero.png"
 
 
 function AboutContainer() {
