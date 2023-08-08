@@ -1,30 +1,25 @@
 .card
+    display: flex
+    flex-direction: column
     width: 100%
+    align-items: center
+    gap: 2rem
 
     &__perfil
         height: 11.5rem
         width: 11.5rem
         background-color: red
         border-radius: 50%
-        transform: translateY(-100px)
-        margin: 0 auto
+        margin-top: 3rem 
 
-        @media (max-width: 767px)
-            transform: translateY(-50px)
-    
     &__person
-        transform: translateY(-80px)
-
-        @media (max-width: 767px)
-            transform: translateY(-40px)
 
     &__star-icon
-        transform: translateY(10px)
+        margin-top: 0.5rem
+
         
     &__assessments
         width: 50%
         margin:  auto
-        transform: translateY(-30px)
+        margin-bottom: 3rem
 
-        @media (max-width: 767px)
-            transform: translateY(-15px)

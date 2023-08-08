@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -32,6 +33,11 @@ function SwiperCarousel() {
             rating: 4.5,
             content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur repellat deleniti quo nesciunt ab quae dolor.',
         },
+        {
+            name: 'Gabrielly',
+            rating: 5,
+            content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur repellat deleniti quo nesciunt ab quae dolor.',
+        }
     ];
 
     return (

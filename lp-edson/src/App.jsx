@@ -4,6 +4,7 @@ import ServicesContainer from "./components/ServicesContainer"
 import TextStep from "./components/TextStep"
 import GalleryContainer from "./components/GalleryContainer"
 import AssessmentsContainer from "./components/AssessmentsContainer"
+import PlansContainer from "./components/PlansContainer"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <TextStep />
       <GalleryContainer />
       <AssessmentsContainer />
+      <PlansContainer />
     </>
   )
 }
