@@ -1,3 +1,81 @@
+@use "../variables"
+@use "../mixins"
+
 .plans
-    min-height:  50vh
+    min-height: 50vh
     width: 100%
+    padding-top: 10rem
+    color: variables.$cor-secundaria
+
+    &__title
+        font-size: variables.$fs-titulo
+        color: variables.$btn-primario
+        text-align: center
+
+    &__cards
+        @include mixins.card(repeat(3, 1fr))
+
+        @media (max-width: 767px)
+            grid-template-columns: repeat(3, minmax(25rem, 1fr))
+
+    &__card
+        height: 32rem
+        border: 2px solid red
+        display: grid
+        border-radius: 2rem
+        transition: transform .4s ease-in-out
+
+        &:hover
+            transform: translateY(-1rem)
+
+        &:nth-child(1)
+            background-color: variables.$prata
+
+        &:nth-child(2)
+            background-color: variables.$btn-primario
+
+        &:nth-child(3)
+            background-color: variables.$btn-secundario
+
+        &__title
+            display: flex
+            flex-direction: column
+            text-align: center
+            font-size: 2rem
+            font-weight: bold
+            margin: 1rem 0 0
+
+            sub
+                font-size: 1rem
+                margin: 0.3rem 0
+
+        &__benefits
+            display: flex
+            flex-direction: column
+            align-items: center
+            align-self: end
+            margin-bottom: 1rem
+
+            &__contain
+                margin-bottom: 1rem
+                font-size: 1.5rem
+
+                i
+                    margin-right: 0.6rem
+        &__price
+            font-size: 5rem
+            font-weight: bold
+            text-align: center
+            
+            span
+                font-size: 2.5rem
+                margin-right: 0.7rem
+    
+        &__call 
+            text-align: center
+            font-size: 1.5rem
+            font-weight: bold
+            background-color: transparent
+            color: variables.$cor-secundaria
+            border: none
+            cursor: pointer

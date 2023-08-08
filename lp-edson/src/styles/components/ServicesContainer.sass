@@ -29,15 +29,7 @@
             color: variables.$btn-primario
     
     &__cards
-        display: grid
-        width: 100%
-        grid-template-columns: repeat(3, 1fr)
-        gap: 1rem
-        margin: 3rem 0
-        overflow: auto
-
-        @media (max-width: 767px)
-            grid-template-columns: repeat(3, minmax(19rem, 1fr))
+        @include mixins.card(repeat(3, 1fr))
 
     &__card
         height: 25rem
