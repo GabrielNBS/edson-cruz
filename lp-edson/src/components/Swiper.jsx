@@ -1,65 +1,70 @@
-import React, { useRef, useState } from 'react';
-
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import '../styles/components/Swiper.sass';
-import '../styles/components/AssessmentsCard.sass'
+import '../styles/components/AssessmentsCard.sass';
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+function renderStars(rating) {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    const stars = [];
+
+    for (let i = 0; i < fullStars; i++) {
+        stars.push(<FaStar key={`full-star-${i}`} style={{ color: 'gold' }} />);
+    }
+
+    if (hasHalfStar) {
+        stars.push(<FaStarHalfAlt key="half-star" style={{ color: 'gold' }} />);
+    }
+
+    return stars;
+}
 
 function SwiperCarousel() {
+    const assessments = [
+        {
+            name: 'Gabriel',
+            rating: 4.5,
+            content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur repellat deleniti quo nesciunt ab quae dolor.',
+        },
+    ];
 
     return (
-        <>
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={false}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide>
+        <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+            }}
+            pagination={{
+                clickable: true,
+            }}
+            navigation={false}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+        >
+            {assessments.map((assessment, index) => (
+                <SwiperSlide key={index}>
                     <div className="card">
                         <div className="card__perfil"></div>
                         <div className="card__person">
-                            <h2>
-                                gabriel
-                            </h2>
+                            <h2>{assessment.name}</h2>
+                            <div className="card__star-icon">
+                                {renderStars(assessment.rating)}
+                            </div>
                         </div>
-                        <div className="card__assessments">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur repellat deleniti quo nesciunt ab quae dolor.
-                        </div>
+                        <div className="card__assessments">{assessment.content}</div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div className="card">
-                        <div className="card__perfil"></div>
-                        <div className="card__person">
-                            <h2>
-                                gabriel
-                            </h2>
-                        </div>
-                        <div className="card__assessments">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur repellat deleniti quo nesciunt ab quae dolor.
-                        </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </>
+            ))}
+        </Swiper>
     );
 }
 
-export default SwiperCarousel
+export default SwiperCarousel;
