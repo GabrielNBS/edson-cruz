@@ -1,11 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import "../styles/components/AboutContainer.sass"
+import "./AboutContainer.sass"
 import { FaRegHandPointLeft } from "react-icons/fa";
 
-import Background from "../img/curveLine.svg"
-import Arrow from "../img/arrow.svg"
-import Hero from "../img/hero.png"
+import Background from "../../img/Curveline.svg"
+import Arrow from "../../img/arrow.svg"
+import Hero from "../../img/hero.png"
 
 
 function AboutContainer() {

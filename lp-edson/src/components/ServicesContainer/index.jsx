@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import "../styles/components/ServicesContainer.sass"
+import "./ServicesContainer.sass"
 
 import { FaCalendarAlt, FaFileSignature} from 'react-icons/fa'
 

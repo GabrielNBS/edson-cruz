@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import "../styles/components/HeaderContainer.sass";
+import "./HeaderContainer.sass";
 
 const HeaderContainer = () => {
     const navbar = [

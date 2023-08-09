@@ -7,7 +7,6 @@ import AssessmentsContainer from "./components/AssessmentsContainer"
 import PlansContainer from "./components/PlansContainer"
 import ContactContainer from "./components/ContactContainer"
 
-
 function App() {
   return (
     <div>

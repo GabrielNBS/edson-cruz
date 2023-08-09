@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import "../styles/components/TextStep.sass"
-import HeroOverlay from "../img/background3.jpg"
+import "./TextStep.sass"
+import HeroOverlay from "../../img/background3.jpg"
 import { useEffect, useState } from 'react';
 
 

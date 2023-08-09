@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import '../styles/components/Swiper.sass';
-import '../styles/components/AssessmentsCard.sass';
+import './Swiper.sass';
+import './AssessmentsCard.sass';
 
 function renderStars(rating) {
     const fullStars = Math.floor(rating);

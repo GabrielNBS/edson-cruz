@@ -2,7 +2,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-import "../styles/components/PlansContainer.sass"
+import "./PlansContainer.sass"
 
 function PlansContainer() {
     const planos = [

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import "../styles/components/AssessmentsContainer.sass"
-import SwiperCarousel from './Swiper'
+import "./AssessmentsContainer.sass"
+import SwiperCarousel from '../Swipper'
 
 function AssessmentsContainer() {
     return (
