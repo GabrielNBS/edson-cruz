@@ -1,0 +1,36 @@
+@use "../../styles/variables"
+
+.social
+    display: inline-flex
+    gap: 2rem
+
+.icon__facebook
+    color: variables.$facebook
+    display: flex
+
+    &:hover
+        animation: shake 0.5s 
+
+.icon__instagram
+    color: variables.$instagram
+    display: flex
+
+    &:hover
+        animation: shake 0.5s 
+
+.icon__whatsapp
+    color: variables.$whatsapp
+    display: flex
+
+    &:hover
+        animation: shake 0.5s 
+
+@keyframes shake
+    0%, 100%
+        transform: translateX(0)
+
+    10%, 30%, 50%, 70%, 90%
+        transform: translateX(-5px)
+
+    20%, 40%, 60%, 80%
+        transform: translateX(5px)

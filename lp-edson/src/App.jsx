@@ -6,6 +6,7 @@ import GalleryContainer from "./components/GalleryContainer"
 import AssessmentsContainer from "./components/AssessmentsContainer"
 import PlansContainer from "./components/PlansContainer"
 import ContactContainer from "./components/ContactContainer"
+import FooterContainer from "./components/FooterContainer"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <AssessmentsContainer />
       <PlansContainer />
       <ContactContainer />
+      <FooterContainer />
     </div>
   )
 }
